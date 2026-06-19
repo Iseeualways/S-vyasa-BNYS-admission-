@@ -9,9 +9,10 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
     rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
   <style>
     /* ── TOKENS ── */
@@ -579,7 +580,7 @@
     }
 
     .section-why h2 {
-      font-size: clamp(22px, 3.2vw, 42px);
+      font-size: clamp(30px, 3.2vw, 42px);
       font-weight: 800;
       color: var(--navy);
       letter-spacing: -.02em;
@@ -657,6 +658,663 @@
     @media (max-width: 576px) {
       .hero-accreditations {
         grid-template-columns: 1fr;
+      }
+    }
+
+    /* ════════════════════════════════════════════════════════════
+   SVYASA BNYS — COMPLETE MOBILE RESPONSIVE QUERIES
+   Paste this whole block right before </body> (inside a <style> tag),
+   AFTER all existing <style> blocks, so it overrides earlier rules.
+   ════════════════════════════════════════════════════════════ */
+
+    /* ─────────────────────────────────────
+   TABLET (≤991px)
+───────────────────────────────────── */
+    @media (max-width: 991px) {
+
+      /* NAVBAR */
+      .navbar-svyasa {
+        padding: 10px 20px;
+      }
+
+      .nav-links {
+        display: none;
+        /* needs hamburger JS — see note at bottom */
+      }
+
+      .nav-logo-img {
+        height: 52px;
+      }
+
+      /* HERO */
+      .hero {
+        max-height: none;
+        padding-bottom: 60px;
+      }
+
+      .hero-content {
+        padding: 110px 0 40px;
+      }
+
+      .hero-title {
+        font-size: clamp(26px, 6vw, 36px);
+      }
+
+      .hero-subtitle {
+        font-size: 16px;
+      }
+
+      /* ACCREDITATION CARDS */
+      .hero-accreditations {
+        position: relative;
+        left: auto;
+        bottom: auto;
+        transform: none;
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 32px;
+        padding: 0 16px;
+        gap: 14px;
+      }
+
+      .accreditation-spacer {
+        display: none;
+      }
+
+      .accreditation-card {
+        min-height: 160px;
+        padding: 14px 10px;
+      }
+
+      .accreditation-card img {
+        height: 70px;
+        margin-bottom: 10px;
+      }
+
+      /* ABOUT */
+      .section-about {
+        padding: 50px 0 40px;
+      }
+
+      .about-img {
+        margin-top: 28px;
+      }
+
+      .about-img img {
+        min-height: 280px;
+      }
+
+      /* COURSE TABLE */
+      .modern-course-table th {
+        font-size: 1.05rem;
+        padding: 8px 20px;
+      }
+
+      .modern-course-table td {
+        font-size: 1rem;
+        padding: 12px 20px;
+      }
+
+      /* BE AND MAKE */
+      .be-make-text {
+        font-size: clamp(3.5rem, 12vw, 8rem);
+        letter-spacing: -2px;
+      }
+
+      /* CURRICULUM */
+      .bnys-curriculum {
+        padding: 60px 0;
+      }
+
+      .subjects-panel {
+        padding: 25px;
+      }
+
+      .year-tabs {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding-bottom: 10px;
+      }
+
+      .year-tabs::-webkit-scrollbar {
+        display: none;
+      }
+
+      .year-btn {
+        flex: 0 0 auto;
+        min-width: 130px;
+        padding: 12px 20px;
+      }
+
+      .subjects-content {
+        grid-template-columns: 1fr;
+      }
+
+      /* SCOPE */
+      .scope-header h2 {
+        font-size: 32px;
+      }
+
+      .scope-header p {
+        font-size: 16px;
+      }
+
+      .scope-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .scope-center {
+        display: none;
+      }
+
+      .scope-card {
+        min-height: 160px;
+        padding: 14px;
+      }
+
+      .scope-card img {
+        width: 80px;
+        height: 80px;
+      }
+
+      .scope-card h6 {
+        font-size: 15px;
+      }
+
+      /* PROCESS STEPS */
+      .process-heading h2 {
+        font-size: 32px;
+      }
+
+      .highlight {
+        transform: none;
+      }
+
+      .highlight:hover {
+        transform: translateY(-6px);
+      }
+
+      .step-card {
+        padding: 22px 20px;
+      }
+
+      /* WHY CARDS */
+      .col-lg-custom {
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+
+      .why-desc {
+        margin-bottom: 40px;
+      }
+
+      /* FAQ */
+      .faq-layout {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+
+      .faq-content {
+        position: static;
+        text-align: center;
+        max-width: 700px;
+        margin: auto;
+      }
+
+      .faq-content h2 {
+        font-size: 36px;
+      }
+
+      /* CTA */
+      .cta-section {
+        min-height: 420px;
+        background-attachment: scroll;
+      }
+
+      .cta-content h2 {
+        font-size: 38px;
+      }
+
+      /* FOOTER */
+      .svyasa-footer {
+        padding: 50px 0;
+      }
+
+      .footer-logo {
+        text-align: left;
+      }
+
+      .footer-logo img {
+        max-width: 240px;
+      }
+
+      .contact-item {
+        margin-bottom: 20px;
+      }
+
+      .contact-item p,
+      .contact-item a {
+        font-size: 15px;
+      }
+    }
+
+    /* ─────────────────────────────────────
+   MOBILE (≤767px)
+───────────────────────────────────── */
+    @media (max-width: 767px) {
+
+      body {
+        overflow-x: hidden;
+      }
+
+      /* NAVBAR */
+      .navbar-svyasa {
+        padding: 8px 16px;
+      }
+
+      .nav-logo-img {
+        height: 44px;
+      }
+
+      .nav-contact-btn {
+        font-size: 11px;
+        padding: 7px 16px;
+      }
+
+      /* HERO */
+      .hero {
+        min-height: auto;
+        padding-bottom: 40px;
+      }
+
+      .hero-content {
+        padding: 85px 16px 32px;
+      }
+
+      .hero-badge {
+        font-size: 13px;
+        padding: 5px 12px;
+      }
+
+      .hero-title {
+        font-size: clamp(24px, 7vw, 30px);
+        margin-bottom: 12px;
+      }
+
+      .hero-subtitle {
+        font-size: 15px;
+        margin-bottom: 22px;
+      }
+
+      .hero-brochure-btn {
+        font-size: 15px;
+        padding: 11px 20px;
+        width: 100%;
+        justify-content: center;
+      }
+
+      /* ADMISSION CARD */
+      .admission-card {
+        margin-top: 24px;
+        padding: 22px 18px;
+      }
+
+      .admission-card h6 {
+        font-size: 17px;
+      }
+
+      .admission-card .subtitle-text {
+        font-size: 14px;
+      }
+
+      .admission-card .form-control {
+        font-size: 14px;
+        padding: 9px 12px;
+      }
+
+      /* ACCREDITATION CARDS */
+      .hero-accreditations {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-top: 24px;
+      }
+
+      .accreditation-card {
+        min-height: auto;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 14px;
+        padding: 14px 16px;
+        text-align: left;
+      }
+
+      .accreditation-card img {
+        height: 50px;
+        margin-bottom: 0;
+        flex-shrink: 0;
+      }
+
+      .accreditation-card p {
+        font-size: 14px;
+        text-align: left;
+      }
+
+      /* ABOUT */
+      .section-about {
+        padding: 40px 0 30px;
+      }
+
+      .section-about h2 {
+        font-size: 24px;
+      }
+
+      .section-about .lead-text {
+        font-size: 15px;
+      }
+
+      .about-img img {
+        min-height: 220px;
+      }
+
+      .scope-header.text-center.mt-5.pt-5 {
+        margin-top: 30px !important;
+        padding-top: 20px !important;
+      }
+
+      .scope-header h2 {
+        font-size: 26px;
+      }
+
+      /* COURSE TABLE — already has its own mobile block in original CSS,
+     these refine it further */
+      .course-table-title {
+        font-size: 1.05rem;
+        padding: 12px 18px;
+      }
+
+      .modern-course-table th {
+        font-size: 1rem;
+        padding: 10px 16px 4px;
+      }
+
+      .modern-course-table td {
+        font-size: 0.95rem;
+        padding: 6px 16px 14px;
+      }
+
+      .modern-course-table strong {
+        font-size: 1.25rem;
+      }
+
+      /* BE AND MAKE */
+      .be-make-section {
+        padding: 6px 0;
+      }
+
+      .be-make-text {
+        font-size: clamp(2.5rem, 16vw, 4.5rem);
+        letter-spacing: -1px;
+      }
+
+      /* CURRICULUM */
+      .bnys-curriculum {
+        padding: 40px 0;
+      }
+
+      .section-heading h2 {
+        font-size: 28px;
+      }
+
+      .section-heading p {
+        font-size: 14px;
+        line-height: 1.7;
+      }
+
+      .subjects-panel {
+        padding: 16px;
+        border-radius: 20px;
+      }
+
+      .year-btn {
+        min-width: 110px;
+        padding: 10px 16px;
+        font-size: 14px;
+        border-radius: 14px;
+      }
+
+      .subject-card {
+        min-height: 60px;
+        font-size: 13px;
+        padding: 10px 10px 10px 56px;
+      }
+
+      .subject-card::before {
+        width: 28px;
+        height: 28px;
+        left: 14px;
+        font-size: 12px;
+      }
+
+      /* SCOPE */
+      .scope-section {
+        padding: 50px 0 60px;
+      }
+
+      .scope-header {
+        margin-bottom: 32px;
+      }
+
+      .scope-header h2 {
+        font-size: 26px;
+      }
+
+      .scope-header p {
+        font-size: 14px;
+        line-height: 1.7;
+      }
+
+      .scope-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      .scope-card {
+        flex-direction: row;
+        text-align: left;
+        justify-content: flex-start;
+        min-height: auto;
+        padding: 14px 16px;
+        gap: 14px;
+      }
+
+      .scope-card img {
+        width: 56px;
+        height: 56px;
+        margin-bottom: 0;
+        flex-shrink: 0;
+      }
+
+      .scope-card h6 {
+        font-size: 14px;
+        text-align: left;
+      }
+
+      /* PROCESS STEPS */
+      .bnys-process {
+        padding: 50px 0;
+      }
+
+      .process-heading h2 {
+        font-size: 26px;
+      }
+
+      .step-card {
+        padding: 20px 18px;
+        border-radius: 18px;
+      }
+
+      .step-num {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+      }
+
+      .step-card h5 {
+        font-size: 17px;
+      }
+
+      .step-card p {
+        font-size: 14px;
+      }
+
+      /* WHY CARDS */
+      .section-why {
+        padding: 20px 0;
+      }
+
+      .why-title {
+        font-size: 26px;
+      }
+
+      .why-desc {
+        font-size: 14px;
+        line-height: 1.7;
+        margin-bottom: 30px;
+      }
+
+      .col-lg-custom {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+
+      .why-card {
+        flex-direction: row;
+        text-align: left;
+        gap: 14px;
+        padding: 14px;
+      }
+
+      .why-card h6 {
+        text-align: left;
+        font-size: 14px;
+      }
+
+      /* FAQ */
+      .section-faq {
+        padding: 50px 0;
+      }
+
+      .faq-content h2 {
+        font-size: 28px;
+      }
+
+      .accordion-button {
+        padding: 16px 16px;
+        font-size: 15px;
+      }
+
+      .accordion-body {
+        padding: 16px;
+        font-size: 14px;
+      }
+
+      /* CTA */
+      .cta-section {
+        min-height: 380px;
+        padding: 60px 16px;
+      }
+
+      .cta-content h2 {
+        font-size: 28px;
+        margin-bottom: 18px;
+      }
+
+      .cta-btn {
+        width: 100%;
+        max-width: 280px;
+        padding: 14px 24px;
+        font-size: 16px;
+      }
+
+      /* FOOTER */
+      .svyasa-footer {
+        padding: 36px 0;
+      }
+
+      .footer-logo img {
+        max-width: 200px;
+      }
+
+      .contact-item i {
+        font-size: 16px;
+      }
+
+      .contact-item p,
+      .contact-item a {
+        font-size: 14px;
+        line-height: 1.6;
+      }
+    }
+
+    /* ─────────────────────────────────────
+   SMALL MOBILE (≤480px)
+───────────────────────────────────── */
+    @media (max-width: 767px) {
+      .scope-header {
+        text-align: left !important;
+      }
+
+      .scope-header h2 {
+        font-size: 32px;
+      }
+    }
+
+    @media (max-width: 480px) {
+
+      .hero-title {
+        font-size: 26px;
+      }
+
+      .hero-subtitle {
+        font-size: 14px;
+      }
+
+      .admission-card {
+        padding: 18px 14px;
+      }
+
+      .be-make-text {
+        font-size: clamp(2rem, 15vw, 3rem);
+      }
+
+      .year-btn {
+        min-width: 95px;
+        padding: 9px 14px;
+        font-size: 13px;
+      }
+
+      .scope-card img {
+        width: 46px;
+        height: 46px;
+      }
+
+      .step-top {
+        gap: 10px;
+      }
+
+      .step-num {
+        width: 30px;
+        height: 30px;
+        font-size: 13px;
+      }
+
+      .cta-content h2 {
+        font-size: 24px;
+      }
+
+      .footer-logo img {
+        max-width: 170px;
       }
     }
   </style>
@@ -1062,6 +1720,7 @@
       color: #07195c;
       margin: 18px 0;
       letter-spacing: -1px;
+      text-align: center;
     }
 
     .section-heading p {
@@ -1184,6 +1843,11 @@
     }
 
     /* Mobile */
+    @media (max-width: 767px) {
+      .section-heading {
+        text-align: left !important;
+      }
+    }
 
     @media(max-width:768px) {
 
@@ -1217,7 +1881,7 @@
 
       .subject-card {
         min-height: 75px;
-        font-size: 14px;
+        font-size: 16px;
       }
 
       .section-heading h2 {
@@ -1915,7 +2579,6 @@
 <section class="section-why">
   <div class="container">
     <div class="text-center">
-      <span class="section-label">Why Choose BNYS</span>
       <h2 class="why-title">Why BNYS at S-VYASA?</h2>
       <p class="why-desc">
         Set amidst a serene and inspiring environment, Prashanti Kutiram, the campus of S-VYASA University, Bangalore,
@@ -2115,6 +2778,12 @@
     color: #0c2f6d;
   }
 
+  @media (max-width: 767px) {
+    .section-why .text-center {
+      text-align: left !important;
+    }
+  }
+
   @media(max-width:768px) {
 
     .why-card {
@@ -2126,17 +2795,17 @@
 
     .why-card h6 {
       text-align: center;
-      font-size: 13px;
+      font-size: 17px;
     }
 
     .why-icon {
-      width: 65px;
-      height: 65px;
+      width: 75px;
+      height: 75px;
     }
 
     .why-icon img {
-      width: 48px;
-      height: 48px;
+      width: 78px;
+      height: 78px;
     }
   }
 </style>
@@ -2338,6 +3007,7 @@
 
     .faq-content h2 {
       font-size: 38px;
+      text-align: left;
     }
 
   }
@@ -2349,17 +3019,17 @@
     }
 
     .faq-content h2 {
-      font-size: 30px;
+      font-size: 36px;
     }
 
     .accordion-button {
       padding: 16px 18px;
-      font-size: 14px;
+      font-size: 18px;
     }
 
     .accordion-body {
       padding: 18px;
-      font-size: 14px;
+      font-size: 16px;
     }
 
   }
@@ -2504,15 +3174,21 @@
 
   }
 
+  @media (max-width: 767px) {
+    h2 br {
+      display: none;
+    }
+  }
+
   @media (max-width: 576px) {
 
     .cta-section {
       min-height: 450px;
-      padding: 80px 20px;
+      padding: 40px 0px;
     }
 
     .cta-content h2 {
-      font-size: 32px;
+      font-size: 36px;
     }
 
     .cta-content p {
@@ -2521,7 +3197,7 @@
 
     .cta-btn {
       width: 100%;
-      max-width: 280px;
+      max-width: 180px;
     }
 
   }
@@ -2620,7 +3296,7 @@
   @media (max-width: 991px) {
 
     .svyasa-footer {
-      padding: 50px 0;
+      padding: 30px 0;
     }
 
     .footer-logo {
@@ -2645,7 +3321,8 @@
 
     .contact-item p,
     .contact-item a {
-      font-size: 15px;
+      font-size: 18px;
+      font-weight: 500;
       text-align: left;
     }
   }
