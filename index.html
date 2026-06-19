@@ -1342,7 +1342,134 @@
       <a href="#faq">Contact Us</a>
     </div>
 
+    <div class="menu-toggle" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+
+      <button class="close-menu" id="closeMenu">
+        &times;
+      </button>
+
+      <div class="mobile-menu-links">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#course">Course</a>
+        <a href="#scope">Scope</a>
+        <a href="#admissions">Admissions</a>
+        <a href="#bnys-scope">Why S-VYASA</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact Us</a>
+      </div>
+
+    </div>
   </nav>
+
+  <style>
+    .menu-toggle{
+    display:none;
+    flex-direction:column;
+    gap:6px;
+    cursor:pointer;
+    z-index:1001;
+}
+
+.menu-toggle span{
+    width:28px;
+    height:2px;
+    background:#001741;
+    transition:.3s;
+}
+
+.mobile-menu{
+    position:fixed;
+    inset:0;
+    background:#ffffff;
+    z-index:9999;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:.45s ease;
+}
+
+.mobile-menu.active{
+    opacity:1;
+    visibility:visible;
+}
+
+.close-menu{
+    position:absolute;
+    top:25px;
+    right:25px;
+
+    background:none;
+    border:none;
+
+    font-size:48px;
+    color:#001741;
+    cursor:pointer;
+}
+
+.mobile-menu-links{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:28px;
+}
+
+.mobile-menu-links a{
+    text-decoration:none;
+    color:#001741;
+    font-size:32px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.mobile-menu-links a:hover{
+    color:#2f74ff;
+    transform:translateX(8px);
+}
+
+@media(max-width:991px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .menu-toggle{
+        display:flex;
+    }
+
+    .navbar-svyasa{
+        padding:10px 20px;
+    }
+
+    .nav-logo-img{
+        height:55px;
+    }
+
+    .mobile-menu-links{
+        width:100%;
+        padding:0 40px;
+        align-items:flex-start;
+    }
+
+    .mobile-menu-links a{
+        font-size:30px;
+        width:100%;
+        border-bottom:1px solid rgba(0,0,0,.08);
+        padding-bottom:12px;
+    }
+}
+  </style>
 
   <!-- ── HERO ── -->
   <section class="hero">
@@ -3335,6 +3462,30 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const mobileMenu = document.getElementById("mobileMenu");
+const closeMenu = document.getElementById("closeMenu");
+
+menuToggle.addEventListener("click", () => {
+    mobileMenu.classList.add("active");
+    document.body.style.overflow = "hidden";
+});
+
+closeMenu.addEventListener("click", () => {
+    mobileMenu.classList.remove("active");
+    document.body.style.overflow = "";
+});
+
+document.querySelectorAll(".mobile-menu a").forEach(link => {
+    link.addEventListener("click", () => {
+        mobileMenu.classList.remove("active");
+        document.body.style.overflow = "";
+    });
+});
+</script>
+
 <script>
   // Navbar scroll effect
   const nav = document.getElementById('mainNav');
