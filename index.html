@@ -1333,13 +1333,13 @@
     </div>
     <div class="nav-links">
       <a href="#home">Home</a>
-      <a href="#about">About Us</a>
-      <a href="#cpurse">Course</a>
-      <a href="#cpurse">Scope</a>
-      <a href="#admissions">Admissions</a>
-      <a href="#bnys-scope">Why S-VYASA</a>
+      <a href="#about-sec">About Us</a>
+      <a href="#courses">Course</a>
+      <a href="#scope-sec">Scope</a>
+      <a href="#process-sec">Admissions</a>
+      <a href="#why-sec">Why S-VYASA</a>
       <a href="#faq">FAQ</a>
-      <a href="#faq">Contact Us</a>
+      <a href="#contact-sec">Contact Us</a>
     </div>
 
     <div class="menu-toggle" id="menuToggle">
@@ -1356,123 +1356,123 @@
 
       <div class="mobile-menu-links">
         <a href="#home">Home</a>
-        <a href="#about">About Us</a>
-        <a href="#course">Course</a>
-        <a href="#scope">Scope</a>
-        <a href="#admissions">Admissions</a>
-        <a href="#bnys-scope">Why S-VYASA</a>
+        <a href="#about-sec">About Us</a>
+        <a href="#courses">Course</a>
+        <a href="#scope-sec">Scope</a>
+        <a href="#process-sec">Admissions</a>
+        <a href="#why-sec">Why S-VYASA</a>
         <a href="#faq">FAQ</a>
-        <a href="#contact">Contact Us</a>
+        <a href="#contact-sec">Contact Us</a>
       </div>
 
     </div>
   </nav>
 
   <style>
-    .menu-toggle{
-    display:none;
-    flex-direction:column;
-    gap:6px;
-    cursor:pointer;
-    z-index:1001;
-}
-
-.menu-toggle span{
-    width:28px;
-    height:2px;
-    background:#001741;
-    transition:.3s;
-}
-
-.mobile-menu{
-    position:fixed;
-    inset:0;
-    background:#ffffff;
-    z-index:9999;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    opacity:0;
-    visibility:hidden;
-
-    transition:.45s ease;
-}
-
-.mobile-menu.active{
-    opacity:1;
-    visibility:visible;
-}
-
-.close-menu{
-    position:absolute;
-    top:25px;
-    right:25px;
-
-    background:none;
-    border:none;
-
-    font-size:48px;
-    color:#001741;
-    cursor:pointer;
-}
-
-.mobile-menu-links{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:28px;
-}
-
-.mobile-menu-links a{
-    text-decoration:none;
-    color:#001741;
-    font-size:32px;
-    font-weight:600;
-    transition:.3s;
-}
-
-.mobile-menu-links a:hover{
-    color:#2f74ff;
-    transform:translateX(8px);
-}
-
-@media(max-width:991px){
-
-    .nav-links{
-        display:none;
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 6px;
+      cursor: pointer;
+      z-index: 1001;
     }
 
-    .menu-toggle{
-        display:flex;
+    .menu-toggle span {
+      width: 28px;
+      height: 2px;
+      background: #001741;
+      transition: .3s;
     }
 
-    .navbar-svyasa{
-        padding:10px 20px;
+    .mobile-menu {
+      position: fixed;
+      inset: 0;
+      background: #ffffff;
+      z-index: 9999;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      opacity: 0;
+      visibility: hidden;
+
+      transition: .45s ease;
     }
 
-    .nav-logo-img{
-        height:55px;
+    .mobile-menu.active {
+      opacity: 1;
+      visibility: visible;
     }
 
-    .mobile-menu-links{
-        width:100%;
-        padding:0 40px;
-        align-items:flex-start;
+    .close-menu {
+      position: absolute;
+      top: 25px;
+      right: 25px;
+
+      background: none;
+      border: none;
+
+      font-size: 48px;
+      color: #001741;
+      cursor: pointer;
     }
 
-    .mobile-menu-links a{
-        font-size:30px;
-        width:100%;
-        border-bottom:1px solid rgba(0,0,0,.08);
-        padding-bottom:12px;
+    .mobile-menu-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 28px;
     }
-}
+
+    .mobile-menu-links a {
+      text-decoration: none;
+      color: #001741;
+      font-size: 32px;
+      font-weight: 600;
+      transition: .3s;
+    }
+
+    .mobile-menu-links a:hover {
+      color: #2f74ff;
+      transform: translateX(8px);
+    }
+
+    @media(max-width:991px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      .navbar-svyasa {
+        padding: 10px 20px;
+      }
+
+      .nav-logo-img {
+        height: 55px;
+      }
+
+      .mobile-menu-links {
+        width: 100%;
+        padding: 0 40px;
+        align-items: flex-start;
+      }
+
+      .mobile-menu-links a {
+        font-size: 30px;
+        width: 100%;
+        border-bottom: 1px solid rgba(0, 0, 0, .08);
+        padding-bottom: 12px;
+      }
+    }
   </style>
 
   <!-- ── HERO ── -->
-  <section class="hero">
+  <section class="hero" id="home">
     <div class="hero-overlay"></div>
     <div class="container hero-content">
       <div class="row align-items-center gy-4">
@@ -1540,7 +1540,7 @@
   <!-- compensate for the card overhang -->
   <div class="accreditation-spacer"></div>
   <!-- ── ABOUT ── -->
-  <section class="section-about">
+  <section class="section-about" id="about-sec">
     <div class="container">
       <div class="row">
         <div class="col-lg-7">
@@ -1598,22 +1598,24 @@
       </div>
 
 
+      <section id="courses">
+        <div class="scope-header text-center mt-5 pt-5">
+          <span class="section-label">ABOUT BNYS</span>
+          <h2 style="color: #07195c;">BNYS Course Details</h2>
+          <p class="text-dark fs-6">
+            The Bachelor of Naturopathy and Yogic Sciences (BNYS) programme at S-VYASA University, Bangalore, integrates
+            modern medical sciences with the principles of Naturopathy and Yoga to prepare competent healthcare
+            professionals capable of promoting holistic health and well-being.
+            <br><br>
+            The programme is an excellent option for students aspiring to build a career in healthcare and natural
+            medicine. Eligible candidates can pursue BNYS admission without appearing for NEET-UG, opening a pathway to
+            become a qualified doctor through an alternative healthcare discipline. Now before getting started with the
+            BNYS admission process, let's get familiar with the course details.
 
-      <div class="scope-header text-center mt-5 pt-5">
-        <span class="section-label">ABOUT BNYS</span>
-        <h2 style="color: #07195c;">BNYS Course Details</h2>
-        <p class="text-dark fs-6">
-          The Bachelor of Naturopathy and Yogic Sciences (BNYS) programme at S-VYASA University, Bangalore, integrates
-          modern medical sciences with the principles of Naturopathy and Yoga to prepare competent healthcare
-          professionals capable of promoting holistic health and well-being.
-          <br><br>
-          The programme is an excellent option for students aspiring to build a career in healthcare and natural
-          medicine. Eligible candidates can pursue BNYS admission without appearing for NEET-UG, opening a pathway to
-          become a qualified doctor through an alternative healthcare discipline. Now before getting started with the
-          BNYS admission process, let's get familiar with the course details.
+          </p>
+        </div>
+      </section>
 
-        </p>
-      </div>
 
       <div class="course-table-wrap">
         <div class="course-table-title">
@@ -2046,7 +2048,7 @@
 
 
 
-  <section class="scope-section">
+  <section class="scope-section" id="scope-sec">
     <div class="scope-overlay"></div>
 
     <div class="container position-relative">
@@ -2287,7 +2289,7 @@
   </style>
 
 
-  <section class="bnys-process">
+  <section class="bnys-process p-4" id="process-sec">
     <div class="container">
 
       <div class="section-heading text-center">
@@ -2414,7 +2416,7 @@
       --ink: #51606e;
       font-family: 'Inter Tight', sans-serif;
       padding: 100px 0;
-      background: #f9fafc;
+      background: #ffffff;
       position: relative;
       overflow: hidden;
     }
@@ -2707,7 +2709,7 @@
 
 
 
-<section class="section-why">
+<section class="section-why" id="why-sec">
   <div class="container">
     <div class="text-center">
       <h2 class="why-title">Why BNYS at S-VYASA?</h2>
@@ -2903,7 +2905,7 @@
   .why-card h6 {
     margin: 0;
     text-align: left;
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 600;
     line-height: 1.5;
     color: #0c2f6d;
@@ -2947,7 +2949,7 @@
 
 
 <!-- FAQ SECTION -->
-<section class="section-faq">
+<section class="section-faq" id="faq">
   <div class="container">
 
     <div class="faq-layout">
@@ -3335,7 +3337,7 @@
 </style>
 
 <!-- ── FOOTER ── -->
-<footer class="svyasa-footer">
+<footer class="svyasa-footer" id="contact-sec">
   <div class="container">
     <div class="row align-items-start gy-5">
 
@@ -3464,26 +3466,26 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
-const menuToggle = document.getElementById("menuToggle");
-const mobileMenu = document.getElementById("mobileMenu");
-const closeMenu = document.getElementById("closeMenu");
+  const menuToggle = document.getElementById("menuToggle");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const closeMenu = document.getElementById("closeMenu");
 
-menuToggle.addEventListener("click", () => {
+  menuToggle.addEventListener("click", () => {
     mobileMenu.classList.add("active");
     document.body.style.overflow = "hidden";
-});
+  });
 
-closeMenu.addEventListener("click", () => {
+  closeMenu.addEventListener("click", () => {
     mobileMenu.classList.remove("active");
     document.body.style.overflow = "";
-});
+  });
 
-document.querySelectorAll(".mobile-menu a").forEach(link => {
+  document.querySelectorAll(".mobile-menu a").forEach(link => {
     link.addEventListener("click", () => {
-        mobileMenu.classList.remove("active");
-        document.body.style.overflow = "";
+      mobileMenu.classList.remove("active");
+      document.body.style.overflow = "";
     });
-});
+  });
 </script>
 
 <script>
